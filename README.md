@@ -14,4 +14,4 @@ adb shell dumpsys backup
 adb shell dumpsys backup | grep "com.googlecodelabs.example.backupexample" -A 4 | grep Current
 
 # restore backup
-adb shell bmgr restore <token> com.googlecodelabs.example.backupexample
+adb shell bmgr restore $token com.googlecodelabs.example.backupexample
