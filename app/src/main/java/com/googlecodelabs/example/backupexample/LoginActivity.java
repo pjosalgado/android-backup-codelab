@@ -92,9 +92,10 @@ public class LoginActivity extends AppCompatActivity {
 
         overlayDebug((TextView) findViewById(R.id.overlay));
 
-        //******************* Implement Login Hinting *****************
-
-        //******************* End implement Login Hinting *************
+        String accountHint = PrefUtils.getLoginHint(this);
+        if (accountHint != null) {
+            mEmailView.setHint(accountHint);
+        }
     }
 
     private void overlayDebug(@Nullable TextView overlay) {
